@@ -480,6 +480,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 072fa18b5b711c84c90cf2a915194e0b, type: 3}
   m_PrefabInstance: {fileID: 199890601}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &204468040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c418b2cba1c59b545bf4556b376f1d45, type: 3}
+  m_PrefabInstance: {fileID: 1728409099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &204468044
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204468040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: c418b2cba1c59b545bf4556b376f1d45, type: 3}
 --- !u!1001 &260903110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1043,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55a5b234b6e127e44a61a14c619a97c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.546
+      value: 3.537
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55a5b234b6e127e44a61a14c619a97c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4148,7 +4167,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.3745, y: 0.68571335, z: 0.57312}
   m_LocalScale: {x: 17.55, y: 25, z: 2.387961}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 543450653354408056}
   m_RootOrder: 4
@@ -4677,10 +4696,10 @@ BoxCollider:
   m_GameObject: {fileID: 3040225445716794629}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.037151124, y: 0.09047475, z: 0.3333334}
-  m_Center: {x: 0.01069541, y: 0.035491727, z: -0.15666653}
+  m_Size: {x: 0.037151124, y: 0.09047475, z: 0.03247107}
+  m_Center: {x: 0.010695408, y: 0.03549173, z: 0.0009079845}
 --- !u!23 &7202271454443288712
 MeshRenderer:
   m_ObjectHideFlags: 0

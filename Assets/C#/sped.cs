@@ -24,9 +24,9 @@ public class sped : MonoBehaviour
     {
 
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
-    }
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    //Debug.Log(collision.gameObject.name);
+    //}
 }
 

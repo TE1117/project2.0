@@ -14,11 +14,8 @@ public class pickUP : MonoBehaviour
     private Rigidbody heldObjRb; //rigidbody of object we pick up
     private bool canDrop = true; //this is needed so we don't throw/drop object when rotating the object
     private int LayerNumber; //layer index
+    //ECM.Components.MouseLook mouseLook;
 
-    //Reference to script which includes mouse movement of player (looking around)
-    //we want to disable the player looking around when rotating the object
-    //example below 
-    //MouseLookScript mouseLookScript;
     void Start()
     {
         LayerNumber = LayerMask.NameToLayer("holdLayer");
@@ -40,7 +37,7 @@ public class pickUP : MonoBehaviour
                     if (hit.transform.gameObject.tag == "can")
                     {
                         //pass in object hit into the PickUpObject function
-                        PickUpObject(hit.transform.gameObject);//
+                        PickUpObject(hit.transform.gameObject);
                     }
                 }
             }
@@ -104,7 +101,6 @@ public class pickUP : MonoBehaviour
 
             float XaxisRotation = Input.GetAxis("Mouse X") * rotationSensitivity;
             float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSensitivity;
-            //rotate the object depending on mouse X-Y Axis
             heldObj.transform.Rotate(Vector3.down, XaxisRotation);
             heldObj.transform.Rotate(Vector3.right, YaxisRotation);
         }

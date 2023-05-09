@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    AudioSource bulletAud;
     void Start()
     {
-        
+        bulletAud=GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +20,8 @@ public class player : MonoBehaviour
         if (collision.gameObject.tag == "bullt") {
             Destroy(collision.gameObject);
             GameManager.bullet += 1;
+            bulletAud.Play();
+
         }
     }
 }

@@ -16,7 +16,7 @@ public class updown : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer == 0) up = true;
         if (timer == 25) up = false;
         if (up==true)

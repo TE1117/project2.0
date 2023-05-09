@@ -6,6 +6,7 @@ public class pickUP : MonoBehaviour
 {
     public GameObject player;
     public Transform holdPos;
+    public GameObject pickupText;
     public float throwForce = 500f; //force at which the object is thrown at
     public float pickUpRange = 10f; //how far the player can pickup the object from
     private float rotationSensitivity = 1f; //how fast/slow the object is rotated in relation to mouse movement
@@ -20,7 +21,8 @@ public class pickUP : MonoBehaviour
     //MouseLookScript mouseLookScript;
     void Start()
     {
-        LayerNumber = LayerMask.NameToLayer("holdLayer"); 
+        LayerNumber = LayerMask.NameToLayer("holdLayer");
+        pickupText.active = false;
 
         //mouseLookScript = player.GetComponent<MouseLookScript>();
     }
@@ -138,6 +140,15 @@ public class pickUP : MonoBehaviour
             heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "can")
+        {
+            pickupText.active = true;
+            Debug.Log("in");
+        }
+        else pickupText.active = false;
     }
 }
 

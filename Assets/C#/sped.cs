@@ -14,33 +14,16 @@ public class sped : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-    //private void FixedUpdate()
-    //{
-    //    Vector3 pos = m_rigidbody.position;
+    private void FixedUpdate()
+    {
+        Vector3 pos = m_rigidbody.position;
+        m_rigidbody.position += Vector3.left * speed * Time.fixedDeltaTime;
+        m_rigidbody.MovePosition(pos);
+    }
 
-        
-    //    m_rigidbody.position += Vector3.left * speed * Time.fixedDeltaTime;
-    //    m_rigidbody.MovePosition(pos);
-    //}
-
-    // Update is called once per frame
     void Update()
     {
 
-    }
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    //Debug.Log(collision.gameObject.name);
-    //}
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player") {
-            Vector3 pos = m_rigidbody.position;
-            Debug.Log("P");
-
-            m_rigidbody.AddForce(100,0,0);
-            m_rigidbody.MovePosition(pos);
-        }
     }
 }
 
